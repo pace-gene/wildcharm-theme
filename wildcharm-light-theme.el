@@ -33,7 +33,7 @@
 (let* ((classTC '((class color) (min-colors 257)))
        (class256 '((class color) (min-colors 256)))
        (classTTY '((type tty)))
-       (fg "#000000")(bg "#ffffff")
+       (fg "#000000")(bg "#eeeeee")
        (black "#000000")(darkgrey "#808080")(darkergrey "#5f5f5f")
        (red "#af0000")(bright-red "#d70000")
        (green "#008700")(bright-green "#5faf5f")
@@ -42,7 +42,7 @@
        (magenta "#870087")(bright-magenta "#af00af")
        (cyan "#005f5f")(bright-cyan "#008787")
        (grey "#d0d0d0")(white "#ffffff")
-       (purple "#5f00d7")(comment "#87875f")
+       (purple "#5f00d7")(comment "#008700")  ;; (comment "#87875f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
        (non-text "#b2b2b2")
@@ -50,7 +50,7 @@
        (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
        (menu "#eeeeee")
        (header-line "#d7d7d7")
-       (hl-line "#eeeeee")
+       (hl-line "#cccccc")
        (block "#eeeeee")
        (diff-added-bg "#afd7af")(diff-refine-added-bg "#d7ffd7")
        (diff-added-fg "#005f00")
@@ -231,9 +231,9 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,green :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((,class256 (:foreground ,comment :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,comment :weight unspecified :slant italic))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,blue :weight unspecified :slant unspecified))))
    `(font-lock-preprocessor-face
@@ -334,9 +334,9 @@
    `(custom-variable-tag
      ((,class256 (:background unspecified :foreground unspecified :weight bold))))
    `(custom-comment
-     ((,class256 (:background unspecified :foreground ,comment :weight unspecified))))
+     ((,class256 (:background unspecified :foreground ,comment :weight italic))))
    `(custom-comment-tag
-     ((,class256 (:background unspecified :foreground unspecified :weight unspecified))))
+     ((,class256 (:background unspecified :foreground unspecified :weight italic))))
    `(widget-field
      ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
    `(widget-inactive
@@ -948,7 +948,7 @@
    `(epa-mark
      ((,class256 (:foreground ,red :weight bold))))
    `(epa-string
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,cyan))))
    `(epa-validity-high
      ((,class256 (:foreground ,green :weight bold))))
    `(epa-validity-medium

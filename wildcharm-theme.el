@@ -43,7 +43,7 @@
        (magenta "#d787d7")(bright-magenta "#ff87ff")
        (cyan "#00afaf")(bright-cyan "#00d7d7")
        (grey "#d0d0d0")(white "#ffffff")
-       (purple "#875fff")(comment "#87875f")
+       (purple "#875fff")(comment "#00af5f")
        (yellow1 "#d7af5f")(yellow2 "#ffd75f")
        (grey1 "#3a3a3a")(grey2 "#262626")
        (non-text "#585858")
@@ -239,9 +239,9 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,bright-green :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((,class256 (:foreground ,comment :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,comment :weight unspecified :slant italic))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,bright-blue :weight unspecified :slant unspecified))))
    `(font-lock-preprocessor-face
@@ -343,9 +343,9 @@
    `(custom-variable-tag
      ((,class256 (:background unspecified :foreground ,white :weight bold))))
    `(custom-comment
-     ((,class256 (:background unspecified :foreground ,comment :weight unspecified))))
+     ((,class256 (:background unspecified :foreground ,comment :weight italic))))
    `(custom-comment-tag
-     ((,class256 (:background unspecified :foreground unspecified :weight unspecified))))
+     ((,class256 (:background unspecified :foreground unspecified :weight italic))))
    `(widget-field
      ((,class256 (:background ,grey2 :foreground ,fg :extend t))))
    `(widget-inactive
@@ -973,7 +973,7 @@
    `(epa-mark
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(epa-string
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,cyan))))
    `(epa-validity-high
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(epa-validity-medium
